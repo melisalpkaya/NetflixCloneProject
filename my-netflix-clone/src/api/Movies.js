@@ -50,6 +50,18 @@ export default {
                 title: 'Belgesel',
                 items: await basicFetch(`discover/movie?with_genres=99&language=tr-TR&api_key=${API_KEY}`),
             },
+            {
+                slug: 'tv-series',
+                title: 'Diziler',
+                items: await basicFetch(`discover/tv?language=tr-TR&api_key=${API_KEY}`),
+                
+            },
+            {
+                slug: 'movies',
+                title: 'Filmler',
+                items: await basicFetch(`discover/movie?language=tr-TR&api_key=${API_KEY}`),
+                
+            },
         ]
     },
 

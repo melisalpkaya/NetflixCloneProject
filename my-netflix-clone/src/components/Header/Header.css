@@ -31,3 +31,22 @@ header.collapsed {
 .header-user-img  img{
     border-radius: 3px;
 }
+
+.navbar-top {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Öğeleri yatay olarak hizalamak için */
+    justify-content: flex-end;
+  }
+  
+  .navbar-elements {
+    margin-right: 20px; /* Öğeler arasında boşluk bırakmak için */
+    cursor: pointer; /* Mouse imleci şeklini değiştirmek için */
+    transition: color 0.3s;
+  }
+
+  .navbar-elements:hover {
+    color: red; /* Fare öğenin üzerine gelince rengi değiştir */
+  }
+  
