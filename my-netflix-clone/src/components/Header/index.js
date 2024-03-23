@@ -17,6 +17,7 @@ function Header({collapsed}) {
                     <li id= 'homepage'className='navbar-elements'><NavLink to= '/'>Ana Sayfa</NavLink></li>
                     <li className='navbar-elements'><NavLink to= '/tv-series'>Diziler</NavLink></li>
                     <li className='navbar-elements'><NavLink to= '/movies'>Filmler</NavLink></li>
+                    <li className='navbar-elements'><NavLink to= '/my-list'>Listem</NavLink></li>
                   
                 </ul>
                 </nav>

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import TvSeriesPage from './pages/TvSeriesPage';
 import MoviePage from './pages/MoviePage';
+import MyList from './pages/MyList';
 
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
@@ -55,7 +56,7 @@ function App() {
           <Route path='/' element={<HomePage featuredMovie={featuredMovie} movieList={movieList} />} />
           <Route path='/tv-series' element={<TvSeriesPage movieList={movieList} />} />
           <Route path='/movies' element={<MoviePage movieList={movieList} />} />
-          
+          <Route path='/my-list' element={<MyList  />} />
          
         </Routes>
         <Footer />
