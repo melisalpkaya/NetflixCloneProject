@@ -1,5 +1,7 @@
 import React from 'react'
 import './Header.css';
+import { NavLink } from 'react-router-dom';
+
 
 function Header({collapsed}) {
     return (
@@ -10,12 +12,14 @@ function Header({collapsed}) {
                 </a>
             </div>
             <div>
+                <nav>
                 <ul className='navbar-top'>
-                    <li className='navbar-elements'>Anasayfa</li>
-                    <li className='navbar-elements'>Diziler</li>
-                    <li className='navbar-elements'>Filmler</li>
-                    <li className='navbar-elements'>Yeni ve Popüler</li>
+                    <li className='navbar-elements'><NavLink to= '/'>Anasayfa</NavLink></li>
+                    <li className='navbar-elements'><NavLink to= '/tv-series'>Diziler</NavLink></li>
+                    <li className='navbar-elements'><NavLink to= '/movies'>Filmler</NavLink></li>
+                    <li className='navbar-elements'><NavLink to= '/whats-new'>Yeni ve Popüler</NavLink></li>
                 </ul>
+                </nav>
             </div>
             <div className="header-user-img">
                 <a href="/">
