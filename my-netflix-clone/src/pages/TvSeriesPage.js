@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MovieRow from '../components/MovieRow';
 import FeaturedMovie from '../components/FeaturedMovie';
-import Movies from '../api/Movies';
+import Movies from '../api/Content';
 
 function TvSeriesPage({ movieList }) {
   const [featuredMovie, setFeaturedMovie] = useState(null);
@@ -20,15 +20,15 @@ function TvSeriesPage({ movieList }) {
     loadFeaturedMovie();
   }, [movieList]);
 
-  // Sadece "tv-series" slug'ına sahip kategoriyi ve ana sayfada sadece "tv-series" olan kategoriyi filtrele
-  const filteredMovieList = movieList.filter(item => item.slug === 'tv-series');
 
   return (
     <div className="page">
       {featuredMovie && <FeaturedMovie item={featuredMovie} />}
       <section className="movie-list">
-        {filteredMovieList.map((item, key) => (
-          <MovieRow title={item.title} items={item.items} key={key}></MovieRow>
+        {movieList.map((category, key) => (
+          (category.slug === 'tv-series' || category.slug === 'trending-tv' ) &&  (
+            <MovieRow title={category.title} items={category.items} key={key}></MovieRow>
+          )
         ))}
       </section>
     </div>

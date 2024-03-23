@@ -10,6 +10,7 @@ const basicFetch = async (endpoint) => {
 export default {
     getHomeList: async () => {
         return [
+            
             {
                 slug: 'originals',
                 title: "Sadece Netflix'te",
@@ -24,6 +25,19 @@ export default {
                 slug: 'toprated',
                 title: "Netflix'te Popüler",
                 items: await basicFetch(`movie/top_rated?language=tr-TR&api_key=${API_KEY}`),
+            },
+            
+            {
+                slug: 'tv-series',
+                title: 'Diziler',
+                items: await basicFetch(`discover/tv?language=tr-TR&api_key=${API_KEY}`),
+                
+            },
+            {
+                slug: 'movies',
+                title: 'Filmler',
+                items: await basicFetch(`discover/movie?language=tr-TR&api_key=${API_KEY}`),
+                
             },
             {
                 slug: 'action',
@@ -51,17 +65,11 @@ export default {
                 items: await basicFetch(`discover/movie?with_genres=99&language=tr-TR&api_key=${API_KEY}`),
             },
             {
-                slug: 'tv-series',
-                title: 'Diziler',
-                items: await basicFetch(`discover/tv?language=tr-TR&api_key=${API_KEY}`),
-                
+                slug: 'trending-tv',
+                title: "Herkes bu dizileri izliyor",
+                items: await basicFetch(`trending/tv/day?language=en-US&api_key=${API_KEY}`),
             },
-            {
-                slug: 'movies',
-                title: 'Filmler',
-                items: await basicFetch(`discover/movie?language=tr-TR&api_key=${API_KEY}`),
-                
-            },
+           
         ]
     },
 

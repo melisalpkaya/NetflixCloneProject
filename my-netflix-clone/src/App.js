@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Movies from './api/Movies';
+import Movies from './api/Content';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TvSeriesPage from './pages/TvSeriesPage';
 import MoviePage from './pages/MoviePage';
-import NewAndPopularPage from './pages/NewAndPopularPage';
+
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
 import './App.css';
@@ -55,7 +55,8 @@ function App() {
           <Route path='/' element={<HomePage featuredMovie={featuredMovie} movieList={movieList} />} />
           <Route path='/tv-series' element={<TvSeriesPage movieList={movieList} />} />
           <Route path='/movies' element={<MoviePage movieList={movieList} />} />
-          <Route path='/whats-new' element={<NewAndPopularPage movieList={movieList} />} />
+          
+         
         </Routes>
         <Footer />
         {movieList.length === 0 && (

@@ -14,10 +14,10 @@ function Header({collapsed}) {
             <div>
                 <nav>
                 <ul className='navbar-top'>
-                    <li className='navbar-elements'><NavLink to= '/'>Anasayfa</NavLink></li>
+                    <li id= 'homepage'className='navbar-elements'><NavLink to= '/'>Ana Sayfa</NavLink></li>
                     <li className='navbar-elements'><NavLink to= '/tv-series'>Diziler</NavLink></li>
                     <li className='navbar-elements'><NavLink to= '/movies'>Filmler</NavLink></li>
-                    <li className='navbar-elements'><NavLink to= '/whats-new'>Yeni ve Popüler</NavLink></li>
+                  
                 </ul>
                 </nav>
             </div>

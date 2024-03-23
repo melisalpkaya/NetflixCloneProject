@@ -36,17 +36,26 @@ header.collapsed {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Öğeleri yatay olarak hizalamak için */
+    display: flex; 
+  
     justify-content: flex-end;
-  }
+}
   
-  .navbar-elements {
-    margin-right: 20px; /* Öğeler arasında boşluk bırakmak için */
-    cursor: pointer; /* Mouse imleci şeklini değiştirmek için */
-    transition: color 0.3s;
-  }
+.navbar-top li {
+    margin-right: 40px; 
+}
 
-  .navbar-elements:hover {
-    color: red; /* Fare öğenin üzerine gelince rengi değiştir */
-  }
-  
+.navbar-top li a {
+    color: inherit; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+    font-size: 14px;
+}
+
+.navbar-top li a:hover {
+    color: red; 
+}
+
+#homepage{
+    font-weight: bold;
+}
