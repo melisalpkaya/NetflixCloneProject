@@ -14,7 +14,8 @@ function FeaturedMovie({item}) {
     if(description.length > 140) {
         description = description.substring(0, 140) + '...';
     }
-
+    
+      
     const handleAddToList = () => {
         // Burada içeriği bir listeye ekleyebilir ve localStorage'a kaydedebilirsiniz
         // Örneğin:
@@ -42,7 +43,7 @@ function FeaturedMovie({item}) {
     };
     
 
-    return (
+    return (    
         <div className="featured-movie" style={{
             backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
         }}>

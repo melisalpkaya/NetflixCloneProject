@@ -59,3 +59,46 @@ header.collapsed {
 #homepage{
     font-weight: bold;
 }
+.header-user-img {
+    position: relative;
+}
+
+.header-dropdown {
+    position: absolute; 
+    font-weight: medium;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    width: 120px; /* Alt menünün genişliği */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+}
+
+.header-user-img:hover .header-dropdown {
+    display: block; /* Mouse imleci üstüne geldiğinde alt menüyü göster */
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    margin-bottom: 10px; /* Dropdown öğeleri arasında boşluk bırak */
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    color: #fff; /* Öğe metin rengi */
+    display: block;
+    transition: color 0.3s; /* Renk değişimi animasyonu */
+}
+
+.dropdown-item a:hover {
+    color: red; /* Fare öğenin üzerine gelince rengi değiştir */
+}
+
+

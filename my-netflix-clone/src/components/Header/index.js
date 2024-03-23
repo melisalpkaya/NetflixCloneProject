@@ -1,9 +1,32 @@
-import React from 'react'
+
+import React, { useState } from 'react';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
 
 
 function Header({collapsed}) {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleProfileMouseOver = () => {
+        setMenuOpen(true);
+    };
+
+    const handleProfileMouseLeave = () => {
+        setMenuOpen(false);
+    };
+
+    const handleMenuMouseOver = () => {
+        setMenuOpen(true);
+    };
+
+    const handleMenuMouseLeave = () => {
+        // Menüden ayrılırken menüyü kapatmayı geciktir
+        setTimeout(() => {
+            setMenuOpen(false);
+        }, 200);
+    };
+
     return (
         <header className={collapsed ? 'collapsed' : ''}>
             <div className="header-logo">
@@ -23,9 +46,18 @@ function Header({collapsed}) {
                 </nav>
             </div>
             <div className="header-user-img">
-                <a href="/">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" />
+                <a href="/" onMouseOver={handleProfileMouseOver} onMouseLeave={handleProfileMouseLeave}>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="User Avatar" />
                 </a>
+                {menuOpen && (
+                    <div className="header-dropdown" onMouseOver={handleMenuMouseOver} onMouseLeave={handleMenuMouseLeave}>
+                        <ul className="dropdown-menu">
+                            <li className="dropdown-item"><NavLink to="/account">Hesap</NavLink></li>
+                            <li className="dropdown-item"><NavLink to="/my-list">Listem</NavLink></li>
+                            <li className="dropdown-item"><NavLink to="/logout">Çıkış Yap</NavLink></li>
+                        </ul>
+                    </div>
+                )}
             </div>
         </header>
     )
