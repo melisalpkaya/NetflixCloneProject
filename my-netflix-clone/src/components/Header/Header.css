@@ -72,8 +72,8 @@ header.collapsed {
     background-color: #333;
     border-radius: 5px;
     padding: 10px;
-    width: 120px; /* Alt menünün genişliği */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    width: 120px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 .header-user-img:hover .header-dropdown {
@@ -87,18 +87,18 @@ header.collapsed {
 }
 
 .dropdown-item {
-    margin-bottom: 10px; /* Dropdown öğeleri arasında boşluk bırak */
+    margin-bottom: 10px; 
 }
 
 .dropdown-item a {
     text-decoration: none;
-    color: #fff; /* Öğe metin rengi */
+    color: #fff; 
     display: block;
     transition: color 0.3s; /* Renk değişimi animasyonu */
 }
 
 .dropdown-item a:hover {
-    color: red; /* Fare öğenin üzerine gelince rengi değiştir */
+    color: red; 
 }
 
 

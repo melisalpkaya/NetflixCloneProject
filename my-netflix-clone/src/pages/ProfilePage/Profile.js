@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import './profile.css';
 
 function Profile() {
-    // Kullanıcı bilgilerini state'te saklayalım
+    // Kullanıcı bilgileri state'te saklanacak
     const [userInfo, setUserInfo] = useState({
         username: localStorage.getItem('username') || 'Default Kullanıcı',
         email: localStorage.getItem('email') || 'example@example.com',
         subscription: localStorage.getItem('subscription') || 'basic'
     });
 
-    // Kullanıcı bilgilerini düzenleme modunu tutacak bir state
+    // Kullanıcı bilgilerini düzenleme modunda tutacak bir state
     const [editing, setEditing] = useState(false);
 
     // Kullanıcı bilgilerini güncellemek için bir fonksiyon

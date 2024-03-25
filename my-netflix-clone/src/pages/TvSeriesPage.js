@@ -4,7 +4,7 @@ import FeaturedMovie from '../components/FeaturedMovie';
 import Movies from '../api/Content';
 
 function TvSeriesPage({ movieList }) {
-  const [featuredMovie, setFeaturedMovie] = useState(null);
+  const [featuredMovie, setFeaturedMovie] = useState(null);  // Öne çıkan dizi state'i
 
   useEffect(() => {
     const loadFeaturedMovie = async () => {

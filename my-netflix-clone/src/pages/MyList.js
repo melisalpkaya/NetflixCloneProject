@@ -1,13 +1,14 @@
 import React from 'react';
 
 function MyList() {
-    // localStorage'dan myList'i al
+    //listeye eklenen filmler için oluşturuldu
+    // localStorage'dan eklenen film listesini al
     const myList = JSON.parse(localStorage.getItem('myList')) || [];
 
-    // myList içerisindeki benzersiz filmleri tutacak bir dizi oluşturalım
+    // myList içerisindeki çoklu filmleri tutacak bir dizi 
     const uniqueMovies = [];
 
-    // Her film için myList içinde benzersiz olup olmadığını kontrol edelim
+    // Her film için myList içinde çoklu olup olmadığını kontrol 
     myList.forEach(item => {
         if (!uniqueMovies.some(movie => movie.id === item.id)) {
             uniqueMovies.push(item);

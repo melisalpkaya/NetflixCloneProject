@@ -14,9 +14,9 @@ import MovieRow from './components/MovieRow';
 import './App.css';
 
 function App() {
-  const [movieList, setMovieList] = useState([]);
-  const [featuredMovie, setFeaturedMovie] = useState(null);
-  const [collapsedHeader, setCollapsedHeader] = useState(false);
+  const [movieList, setMovieList] = useState([]); // Film listesi
+  const [featuredMovie, setFeaturedMovie] = useState(null); // Öne çıkan film
+  const [collapsedHeader, setCollapsedHeader] = useState(false); // Başlık çubuğunun daraltılmış olup olmadığı
  
 
 
@@ -79,6 +79,7 @@ function App() {
 }
 
 function HomePage({ featuredMovie, movieList }) {
+  // Ana Sayfa bileşeni, öne çıkan film ve film listesi ile birlikte oluşturulur
   return (
     <>
       {featuredMovie && <FeaturedMovie item={featuredMovie} />}

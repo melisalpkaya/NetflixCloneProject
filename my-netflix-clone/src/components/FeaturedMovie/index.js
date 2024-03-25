@@ -2,9 +2,9 @@ import React from 'react'
 import './FeaturedMovie.css';
 
 function FeaturedMovie({item}) {
-    const yearDate = new Date(item.first_air_date);
+    const yearDate = new Date(item.first_air_date);   // İçerik yayınlanma yıl bilgisi
 
-    const genres = [];
+    const genres = [];   // Tür bilgilerini tutmak için bir dizi
     
     item.genres.forEach((value, index) => {
         genres.push(value.name)
@@ -17,16 +17,15 @@ function FeaturedMovie({item}) {
     
       
     const handleAddToList = () => {
-        // Burada içeriği bir listeye ekleyebilir ve localStorage'a kaydedebilirsiniz
-        // Örneğin:
+        // İçerik bir listeye eklendi ve localStorage'a kaydedildi (film listesi için)
         const myList = JSON.parse(localStorage.getItem('myList')) || [];
         myList.push(item);
         localStorage.setItem('myList', JSON.stringify(myList));
     
-        // Kullanıcıya bir geri bildirim gösterebilirsiniz
+        
         alert('İçerik listeye eklendi!');
     
-        // Eklenen içerikleri MyList'e taşıyın
+        // Eklenen içerikler MyList'e taşındı
         const myListItem = {
             title: item.original_name,
             overview: item.overview,
@@ -36,7 +35,7 @@ function FeaturedMovie({item}) {
             genres: item.genres
         };
     
-        // MyList bileşenine taşımak için yerel depoya (localStorage) ekleyin
+      
         const myListItems = JSON.parse(localStorage.getItem('myListItems')) || [];
         myListItems.push(myListItem);
         localStorage.setItem('myListItems', JSON.stringify(myListItems));

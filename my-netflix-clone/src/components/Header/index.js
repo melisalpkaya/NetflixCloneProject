@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 function Header({collapsed}) {
-
+ // Menünün açık veya kapalı olduğunu tutmak için kullanılacak state
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleProfileMouseOver = () => {
@@ -21,7 +21,7 @@ function Header({collapsed}) {
     };
 
     const handleMenuMouseLeave = () => {
-        // Menüden ayrılırken menüyü kapatmayı geciktir
+       
         setTimeout(() => {
             setMenuOpen(false);
         }, 200);

@@ -12,7 +12,7 @@ function MoviePage() {
       const movies = await Movies.getHomeList();
       setMovieList(movies);
       
-      // Öne çıkan filmi belirle
+      
       const moviesCategory = movies.find(category => category.slug === 'movies');
       if (moviesCategory && moviesCategory.items.results.length > 0) {
         const randomIndex = Math.floor(Math.random() * moviesCategory.items.results.length);

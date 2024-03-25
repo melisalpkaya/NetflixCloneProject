@@ -5,8 +5,10 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 
 function MovieRow({title, items}) {
+    // Yatay kaydırma pozisyonunu saklamak için kullanılacak olan state 
     const [scrollX, setScrollX] = useState(-400);
 
+      // Sol ok ikonuna tıklanınca çalışacak fonksiyon
     const handleLeftArrow = () => {
         let x = scrollX + Math.round(window.innerWidth / 2);
         if(x > 0 ) {
@@ -14,7 +16,7 @@ function MovieRow({title, items}) {
         }
         setScrollX(x);
     }
-
+    // Sağ ok ikonuna tıklanınca çalışacak fonksiyon
     const handleRightArrow = () => {
         let x = scrollX - Math.round(window.innerWidth / 2);
         let listWidth = items.results.length * 150;

@@ -42,30 +42,30 @@
     background-color: #bf0813;
 }
 
-/* Edit mode styles */
+
 .edit-mode .profile-input {
     border: 1px solid #e50914;
-    width: calc(100% - 16px); /* Adjust as needed */
+    width: calc(100% - 16px); 
 }
 .edit-mode .profile-input select {
-    width: 30%; /* Adjust as needed */
+    width: 30%; 
 }
 
 .edit-mode .profile-button {
     background-color: #fff;
     color: #e50914;
     border: 1px solid #e50914;
-    width: auto; /* Adjust as needed */
+    width: auto; 
 }
 
-/* Additional styles for profile image and right section */
+
 .profile-left {
     flex: 0 0 auto;
 }
 
 .profile-right {
     flex: 1;
-    padding-left: 20px; /* Adjust as needed */
+    padding-left: 20px;
 }
 
 .user-img img{
