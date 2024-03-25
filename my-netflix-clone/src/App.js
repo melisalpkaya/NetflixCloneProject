@@ -7,7 +7,7 @@ import TvSeriesPage from './pages/TvSeriesPage';
 import MoviePage from './pages/MoviePage';
 import MyList from './pages/MyList';
 import Profile from './pages/ProfilePage/Profile';
-import Landing from './pages/LandingPage/landing';
+
 
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
@@ -17,6 +17,8 @@ function App() {
   const [movieList, setMovieList] = useState([]);
   const [featuredMovie, setFeaturedMovie] = useState(null);
   const [collapsedHeader, setCollapsedHeader] = useState(false);
+ 
+
 
   useEffect(() => {
     const loadMovies = async () => {
@@ -53,15 +55,16 @@ function App() {
   return (
     <Router>
       <div className="page">
-        <Header collapsed={collapsedHeader} />
+      
+      <Header collapsed={collapsedHeader} />
+
         <Routes>
           <Route path='/' element={<HomePage featuredMovie={featuredMovie} movieList={movieList} />} />
           <Route path='/tv-series' element={<TvSeriesPage movieList={movieList} />} />
           <Route path='/movies' element={<MoviePage movieList={movieList} />} />
           <Route path='/my-list' element={<MyList  />} />
           <Route path='/account' element={<Profile  />} />
-          <Route path='/logout' element={<Landing />} />
-         
+          
       
         </Routes>
         <Footer />

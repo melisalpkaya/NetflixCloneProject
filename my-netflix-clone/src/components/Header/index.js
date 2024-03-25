@@ -54,7 +54,7 @@ function Header({collapsed}) {
                         <ul className="dropdown-menu">
                             <li className="dropdown-item"><NavLink to="/account">Hesap</NavLink></li>
                             <li className="dropdown-item"><NavLink to="/my-list">Listem</NavLink></li>
-                            <li className="dropdown-item"><NavLink to="/logout">Çıkış Yap</NavLink></li>
+                            <li className="dropdown-item"><NavLink to="/">Çıkış Yap</NavLink></li>
                         </ul>
                     </div>
                 )}
