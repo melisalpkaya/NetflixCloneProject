@@ -1,0 +1,73 @@
+.profile-container {
+    display: flex;
+    margin: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.profile-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile-field {
+    margin-bottom: 15px;
+}
+
+.profile-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.profile-button:hover {
+    background-color: #bf0813;
+}
+
+/* Edit mode styles */
+.edit-mode .profile-input {
+    border: 1px solid #e50914;
+    width: calc(100% - 16px); /* Adjust as needed */
+}
+.edit-mode .profile-input select {
+    width: 30%; /* Adjust as needed */
+}
+
+.edit-mode .profile-button {
+    background-color: #fff;
+    color: #e50914;
+    border: 1px solid #e50914;
+    width: auto; /* Adjust as needed */
+}
+
+/* Additional styles for profile image and right section */
+.profile-left {
+    flex: 0 0 auto;
+}
+
+.profile-right {
+    flex: 1;
+    padding-left: 20px; /* Adjust as needed */
+}
+
+.user-img img{
+    max-width: 200px;
+}

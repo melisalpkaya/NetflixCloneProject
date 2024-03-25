@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import TvSeriesPage from './pages/TvSeriesPage';
 import MoviePage from './pages/MoviePage';
 import MyList from './pages/MyList';
+import Profile from './pages/ProfilePage/Profile';
+import Landing from './pages/LandingPage/landing';
 
 import FeaturedMovie from './components/FeaturedMovie';
 import MovieRow from './components/MovieRow';
@@ -57,7 +59,10 @@ function App() {
           <Route path='/tv-series' element={<TvSeriesPage movieList={movieList} />} />
           <Route path='/movies' element={<MoviePage movieList={movieList} />} />
           <Route path='/my-list' element={<MyList  />} />
+          <Route path='/account' element={<Profile  />} />
+          <Route path='/logout' element={<Landing />} />
          
+      
         </Routes>
         <Footer />
         {movieList.length === 0 && (
